@@ -31,10 +31,17 @@ Use the `template/SKILL.md` as a starting point for creating new skills.
 ```
 skills/
 ├── .claude-plugin/
-│   └── marketplace.json    # Plugin marketplace configuration
-├── skills/
-│   └── macos-notes/        # macOS Notes app skill
+│   └── marketplace.json              # Marketplace catalog
+├── plugins/
+│   └── macos-skills/                 # Plugin directory
+│       ├── .claude-plugin/
+│       │   └── plugin.json           # Plugin manifest
+│       └── skills/
+│           └── macos-notes/          # Skill directory
+│               ├── SKILL.md
+│               └── scripts/
+│                   └── *.sh
 ├── template/
-│   └── SKILL.md            # Skill template
+│   └── SKILL.md                      # Skill template
 └── README.md
 ```

@@ -11,17 +11,17 @@ Interact with the macOS Notes app using bundled shell scripts that wrap AppleScr
 
 List all notes in default folder:
 ```bash
-scripts/list_notes.sh
+${CLAUDE_PLUGIN_ROOT}/scripts/list_notes.sh
 ```
 
 Read a specific note:
 ```bash
-scripts/read_note.sh "Note Title"
+${CLAUDE_PLUGIN_ROOT}/scripts/read_note.sh "Note Title"
 ```
 
 Create a new note:
 ```bash
-scripts/create_note.sh "My Title" "Note content here"
+${CLAUDE_PLUGIN_ROOT}/scripts/create_note.sh "My Title" "Note content here"
 ```
 
 ## Available Scripts
@@ -41,25 +41,25 @@ scripts/create_note.sh "My Title" "Note content here"
 
 ### List Folders
 ```bash
-scripts/list_folders.sh
+${CLAUDE_PLUGIN_ROOT}/scripts/list_folders.sh
 # Output: account/folder per line (e.g., "iCloud/Notes")
 ```
 
 ### List Notes
 ```bash
-scripts/list_notes.sh "Notes"
+${CLAUDE_PLUGIN_ROOT}/scripts/list_notes.sh "Notes"
 # Output: JSON array [{"name":"...", "id":"..."}]
 ```
 
 ### Read Note
 By name (uses default account, specify folder):
 ```bash
-scripts/read_note.sh "Shopping List" "Notes"
+${CLAUDE_PLUGIN_ROOT}/scripts/read_note.sh "Shopping List" "Notes"
 ```
 
 By ID (works across accounts):
 ```bash
-scripts/read_note.sh "x-coredata://..."
+${CLAUDE_PLUGIN_ROOT}/scripts/read_note.sh "x-coredata://..."
 ```
 
 Output is HTML. Extract text content by stripping tags.
@@ -67,40 +67,40 @@ Output is HTML. Extract text content by stripping tags.
 ### Create Note
 Plain text (auto-wrapped in HTML):
 ```bash
-scripts/create_note.sh "Meeting Notes" "Discussed project timeline"
+${CLAUDE_PLUGIN_ROOT}/scripts/create_note.sh "Meeting Notes" "Discussed project timeline"
 ```
 
 With HTML formatting:
 ```bash
-scripts/create_note.sh "Formatted" "<div><h1>Title</h1></div><div><ul><li>Item 1</li></ul></div>"
+${CLAUDE_PLUGIN_ROOT}/scripts/create_note.sh "Formatted" "<div><h1>Title</h1></div><div><ul><li>Item 1</li></ul></div>"
 ```
 
 In specific folder:
 ```bash
-scripts/create_note.sh "Work Note" "Content" "Work"
+${CLAUDE_PLUGIN_ROOT}/scripts/create_note.sh "Work Note" "Content" "Work"
 ```
 
 ### Update Note
 Replace entire note body:
 ```bash
-scripts/update_note.sh "Shopping List" "<div><h1>Shopping List</h1></div><div>Milk, Eggs, Bread</div>"
+${CLAUDE_PLUGIN_ROOT}/scripts/update_note.sh "Shopping List" "<div><h1>Shopping List</h1></div><div>Milk, Eggs, Bread</div>"
 ```
 
 ### Delete Note
 ```bash
-scripts/delete_note.sh "Old Note"
-scripts/delete_note.sh "x-coredata://..." # by ID
+${CLAUDE_PLUGIN_ROOT}/scripts/delete_note.sh "Old Note"
+${CLAUDE_PLUGIN_ROOT}/scripts/delete_note.sh "x-coredata://..." # by ID
 ```
 
 ### Search Notes
 ```bash
-scripts/search_notes.sh "project"
+${CLAUDE_PLUGIN_ROOT}/scripts/search_notes.sh "project"
 # Output: JSON array [{"name":"...", "id":"...", "folder":"..."}]
 ```
 
 ### Create Folder
 ```bash
-scripts/create_folder.sh "Projects"
+${CLAUDE_PLUGIN_ROOT}/scripts/create_folder.sh "Projects"
 ```
 
 ## Notes Format

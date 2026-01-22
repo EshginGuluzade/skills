@@ -11,12 +11,8 @@
   "plugins": [
     {
       "name": "macos-skills",
-      "description": "macOS automation skills including Notes app integration for reading, creating, updating, and searching notes",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/macos-notes"
-      ]
+      "description": "macOS automation skills including Notes app integration",
+      "source": "./plugins/macos-skills"
     }
   ]
 }
