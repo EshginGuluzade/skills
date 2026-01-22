@@ -1,0 +1,22 @@
+{
+  "name": "skills",
+  "owner": {
+    "name": "Eshgin Guluzade",
+    "email": "eshgin@example.com"
+  },
+  "metadata": {
+    "description": "Custom Claude skills collection",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "macos-skills",
+      "description": "macOS automation skills including Notes app integration for reading, creating, updating, and searching notes",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/macos-notes"
+      ]
+    }
+  ]
+}
