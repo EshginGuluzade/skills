@@ -7,6 +7,15 @@ description: Interact with macOS Notes app via AppleScript. Use when Claude need
 
 Interact with the macOS Notes app using bundled shell scripts that wrap AppleScript commands.
 
+## Critical Rules
+
+**NEVER overwrite existing note content.** When adding content to an existing note:
+1. ALWAYS read the note first with `read_note.sh`
+2. Append new content to the existing HTML
+3. Update with the combined content using `update_note.sh`
+
+The `update_note.sh` script replaces the entire note body, so you must preserve existing content by reading first and merging.
+
 ## Quick Start
 
 List all notes in default folder:
@@ -81,9 +90,10 @@ ${CLAUDE_PLUGIN_ROOT}/scripts/create_note.sh "Work Note" "Content" "Work"
 ```
 
 ### Update Note
-Replace entire note body:
+**Warning:** This replaces the entire note body. Always read existing content first and append to it.
 ```bash
-${CLAUDE_PLUGIN_ROOT}/scripts/update_note.sh "Shopping List" "<div><h1>Shopping List</h1></div><div>Milk, Eggs, Bread</div>"
+# First read existing content, then append new content, then update:
+${CLAUDE_PLUGIN_ROOT}/scripts/update_note.sh "Shopping List" "<div><h1>Shopping List</h1></div><div>Existing content...</div><div>New content here</div>"
 ```
 
 ### Delete Note
