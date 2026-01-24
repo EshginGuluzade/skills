@@ -13,6 +13,11 @@
       "name": "macos-skills",
       "description": "macOS automation skills including Notes app integration",
       "source": "./plugins/macos-skills"
+    },
+    {
+      "name": "infra-skills",
+      "description": "Infrastructure and cloud architecture skills",
+      "source": "./plugins/infra-skills"
     }
   ]
 }

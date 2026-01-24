@@ -8,6 +8,10 @@ A collection of custom Claude skills for automation and productivity.
 
 macOS Notes app integration for reading, creating, updating, and searching notes.
 
+### gcp-architect
+
+Expert GCP architecture guidance based on official documentation. Provides recommendations following Google Cloud Architecture Framework principles.
+
 ## Installation
 
 Add this marketplace to Claude:
@@ -20,6 +24,7 @@ Install skills:
 
 ```bash
 /plugin install macos-skills@skills
+/plugin install infra-skills@skills
 ```
 
 ## Creating New Skills
@@ -33,14 +38,20 @@ skills/
 ├── .claude-plugin/
 │   └── marketplace.json              # Marketplace catalog
 ├── plugins/
-│   └── macos-skills/                 # Plugin directory
+│   ├── macos-skills/                 # macOS automation plugin
+│   │   ├── .claude-plugin/
+│   │   │   └── plugin.json
+│   │   └── skills/
+│   │       └── macos-notes/
+│   │           ├── SKILL.md
+│   │           └── scripts/
+│   │               └── *.sh
+│   └── infra-skills/                 # Infrastructure plugin
 │       ├── .claude-plugin/
-│       │   └── plugin.json           # Plugin manifest
+│       │   └── plugin.json
 │       └── skills/
-│           └── macos-notes/          # Skill directory
-│               ├── SKILL.md
-│               └── scripts/
-│                   └── *.sh
+│           └── gcp-architect/
+│               └── SKILL.md
 ├── template/
 │   └── SKILL.md                      # Skill template
 └── README.md
