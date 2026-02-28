@@ -12,6 +12,10 @@ macOS Notes app integration for reading, creating, updating, and searching notes
 
 Expert GCP architecture guidance based on official documentation. Provides recommendations following Google Cloud Architecture Framework principles.
 
+### docker-expert
+
+Expert Docker and container guidance based on official documentation. Covers Dockerfiles, multi-stage builds, Compose, networking, security hardening, and troubleshooting.
+
 ## Installation
 
 Add this marketplace to Claude:
@@ -50,7 +54,9 @@ skills/
 │       ├── .claude-plugin/
 │       │   └── plugin.json
 │       └── skills/
-│           └── gcp-architect/
+│           ├── gcp-architect/
+│           │   └── SKILL.md
+│           └── docker-expert/
 │               └── SKILL.md
 ├── template/
 │   └── SKILL.md                      # Skill template
